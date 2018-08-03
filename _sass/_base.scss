@@ -1,0 +1,158 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/**
+ * Basic styling
+ */
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $color-text;
+  background-color: $color-bg;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  cursor: url(cursor-default.svg), auto;
+}
+
+
+%cursor-pointer {
+  cursor: url(cursor-pointer.svg), auto;
+}
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * `main` element
+ */
+main {
+  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $base-font-weight;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-secondary;
+    text-decoration: underline;
+    @extend %cursor-pointer;
+  }
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/**
+ * Icons
+ */
+
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    padding-right: 5px;
+    vertical-align: text-top;
+}
+
+.social-media-list {
+  li + li {
+    padding-top: 5px;
+  }
+}

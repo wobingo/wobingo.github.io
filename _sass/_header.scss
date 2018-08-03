@@ -1,0 +1,34 @@
+.site-header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  margin: 0;
+  padding: 0;
+
+  a {
+    display: block;
+    &:hover {
+      transform: rotate(6deg);
+      svg #wordmark {
+        fill: blue;
+        path {
+          animation: 0.1s wiggle infinite;
+        }
+      }
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  svg #wordmark {
+    fill: red;
+  }
+}

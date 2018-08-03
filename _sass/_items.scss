@@ -1,0 +1,10 @@
+.items {
+  width: 100vw;
+  height: 100%;
+  .item {
+    &:hover {
+      transform: scale(1.1) rotate(3deg);
+      @extend %cursor-pointer;
+    }
+  }
+}

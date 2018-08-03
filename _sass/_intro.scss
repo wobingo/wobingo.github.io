@@ -1,0 +1,34 @@
+#intro {
+  font-size: 50px;
+  font-family: 'Space Mono';
+  font-weight: bold;
+  letter-spacing: 4px;
+  fill: $color-bg;
+  stroke: $color-primary;
+  stroke-width: 2;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 100%;
+    overflow: visible;
+
+    a {
+      text-decoration: underline;
+      fill: inherit;
+      stroke: inherit;
+
+      &:hover {
+        fill: $color-secondary;
+        @extend %cursor-pointer;
+      }
+    }
+  }
+
+  .hover-gif {
+    display: none;
+
+  }
+}
