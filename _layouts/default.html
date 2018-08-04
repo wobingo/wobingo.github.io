@@ -11,8 +11,14 @@
       {{ content }}
     </main>
 
+    {%- include items.html -%}
+
     {%- include footer.html -%}
 
   </body>
+
+  <script src="{{ 'assets/scripts/smooth-scroll.polyfills.min.js' | relative_url }}" type="text/javascript"></script>
+  <script src="{{ 'assets/scripts/main.js' | relative_url }}" type="text/javascript"></script>
+
 
 </html>

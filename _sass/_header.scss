@@ -1,16 +1,11 @@
 .site-header {
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  z-index: 1;
 }
 
 #logo {
-  margin: 0;
+  margin: 20px;
   padding: 0;
+  position: fixed;
 
   a {
     display: block;
@@ -30,5 +25,72 @@
 
   svg #wordmark {
     fill: red;
+  }
+}
+
+.site-nav {
+  position: fixed;
+  margin: 20px;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+
+  .nav-trigger {
+      display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    padding: 12px;
+  }
+
+  @include media-query($on-palm) {
+    position: absolute;
+    top: 9px;
+    right: $spacing-unit / 2;
+    border-radius: 5px;
+    text-align: right;
+
+    label[for="nav-trigger"] {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 36px;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+    }
+
+    input ~ .trigger {
+      clear: both;
+      display: none;
+    }
+
+    input:checked ~ .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .page-link {
+      display: block;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      margin-left: 20px;
+    }
   }
 }

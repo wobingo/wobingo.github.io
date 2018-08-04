@@ -1,10 +1,37 @@
 <div id="intro">
-  <svg width="861px" height="429px" viewBox="0 0 861 429" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg width="861px" height="429px" viewBox="0 0 861 429" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"F>
     <defs>
         <path d="M0,213.503027 C0,327 89.3514599,427.649194 197,427 C309.70068,426.320338 402,334 402,213.5 C402,93 510.232558,0 639.72093,0 C769.209302,0 858.511628,106.5 858.511628,213.5 C858.511628,320.5 762,427 652,427 C542,427 491,351.5 491,266.5 C491,181.5 560,106 639.72093,106" id="text-path" />
     </defs>
     <text>
-      <textPath xlink:href="#text-path" startOffset="5%"><a xlink:href="#">Wo Chan</a> is a <a xlink:href="#poems">poet</a>, <a xlink:href="#">drag performer</a>, and <a xlink:href="#">vers top</a></textPath>
+      <textPath xlink:href="#text-path" startOffset="5%">
+        <a data-scroll xlink:href="#" class="intro-link" onMouseOver="showGif('gif-wo')" onMouseOut="hideGif('gif-wo')">Wo Chan</a> is a <a data-scroll xlink:href="#poems" class="intro-link" onMouseOver="showGif('gif-poetry')" onMouseOut="hideGif('gif-poetry')">poet</a>, <a data-scroll class="intro-link" xlink:href="#" onMouseOver="showGif('gif-drag')" onMouseOut="hideGif('gif-drag')">drag performer</a>, and <a data-scroll class="intro-link" xlink:href="#" onMouseOver="showGif('gif-vers')" onMouseOut="hideGif('gif-vers')">vers top</a>
+      </textPath>
     </text>
   </svg>
+  <div id="hover-gifs">
+    <img id="gif-wo" src="{{ '/assets/images/ditto.gif' | relative_url }}" alt="ditto">
+    <img id="gif-poetry" src="{{ '/assets/images/book.gif' | relative_url }}" alt="book">
+    <img id="gif-drag" src="{{ '/assets/images/pearls.gif' | relative_url }}" alt="pearls">
+    <img id="gif-vers" src="{{ '/assets/images/banana.gif' | relative_url }}" alt="banana">
+
+  </div>
 </div>
+
+<script>
+  function showGif(id) {
+    // Generate a percentage between 20% and 80%
+    var posX = (Math.random() * 60) + 20;
+    var posY = (Math.random() * 60) + 20;
+    const gif = document.getElementById(id);
+    gif.style.cssText = `left: ${posX}%;
+                         top: ${posY}%;
+                         display: block;`;
+  };
+
+  function hideGif(id) {
+    const gif = document.getElementById(id);
+    // Remove all inline styles
+    gif.style.cssText = null;
+  };
+</script>
