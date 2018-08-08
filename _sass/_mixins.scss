@@ -14,3 +14,15 @@
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
+
+%cursor-default {
+  cursor: url(images/cursor-default.png) 3 0, auto; /* Legacy */
+  cursor: url(images/cursor-default.svg) 3 0, auto; /* FF */
+  cursor: -webkit-image-set(url(images/cursor-default.png) 1x, url(images/cursor-default@2x.png) 2x) 3 0, auto;
+}
+
+%cursor-pointer {
+  cursor: url(images/cursor-pointer.png) 13 2, pointer; /* Legacy */
+  cursor: url(images/cursor-pointer.svg) 13 2, pointer; /* FF */
+  cursor: -webkit-image-set(url(images/cursor-pointer.png) 1x, url(images/cursor-pointer@2x.png) 2x) 13 2, pointer;
+}

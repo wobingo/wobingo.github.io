@@ -32,14 +32,16 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  cursor: url(images/cursor-default.svg), auto;
+  @extend %cursor-default;
 }
 
-
-%cursor-pointer {
-  cursor: url(images/cursor-pointer.svg), auto;
+::selection {
+  background: $color-primary;
 }
 
+::-moz-selection {
+  background: $color-primary;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm

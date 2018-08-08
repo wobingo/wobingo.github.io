@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="46px" viewBox="0 0 33 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>cursor-resize-v</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-249.000000, -820.000000)">
+            <g id="cursor-resize-v" transform="translate(265.500000, 843.000000) rotate(90.000000) translate(-265.500000, -843.000000) translate(242.500000, 826.500000)">
+                <polygon id="Path" fill="#000000" points="30 12 30 0.435268426 45.1197474 16.5 30 32.5647316 30 21 16 21 16 32.5647316 0.880252636 16.5 16 0.435268426 16 12"></polygon>
+                <polygon id="Path" fill="#FFFFFF" points="33 15 13 15 13 8 5 16.5 13 25 13 18 33 18 33 25 41 16.5 33 8"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

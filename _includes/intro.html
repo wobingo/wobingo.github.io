@@ -1,37 +1,55 @@
 <div id="intro">
   <svg width="861px" height="429px" viewBox="0 0 861 429" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"F>
     <defs>
-        <path d="M0,213.503027 C0,327 89.3514599,427.649194 197,427 C309.70068,426.320338 402,334 402,213.5 C402,93 510.232558,0 639.72093,0 C769.209302,0 858.511628,106.5 858.511628,213.5 C858.511628,320.5 762,427 652,427 C542,427 491,351.5 491,266.5 C491,181.5 560,106 639.72093,106" id="text-path" />
+        <path d="M0,213.503027 C0,327 89.3514599,427.649194 197,427 C309.70068,426.320338 395,331 418,213.5 C441,96 532.232558,0 661.72093,0 C791.209302,0 880.511628,106.5 880.511628,213.5 C880.511628,320.5 784,427 674,427 C564,427 513,351.5 513,266.5 C513,181.5 582,106 661.72093,106" id="text-path" />
     </defs>
     <text>
       <textPath xlink:href="#text-path" startOffset="5%">
-        <a data-scroll xlink:href="#" class="intro-link" onMouseOver="showGif('gif-wo')" onMouseOut="hideGif('gif-wo')">Wo Chan</a> is a <a data-scroll xlink:href="#poems" class="intro-link" onMouseOver="showGif('gif-poetry')" onMouseOut="hideGif('gif-poetry')">poet</a>, <a data-scroll class="intro-link" xlink:href="#" onMouseOver="showGif('gif-drag')" onMouseOut="hideGif('gif-drag')">drag performer</a>, and <a data-scroll class="intro-link" xlink:href="#" onMouseOver="showGif('gif-vers')" onMouseOut="hideGif('gif-vers')">vers top</a>
+        <a xlink:href="#" class="intro-link" data-gif="wo">Wo Chan</a> is a
+        <a xlink:href="#poems" class="intro-link" data-gif="poetry">poet</a>,
+        <a class="intro-link" xlink:href="#" data-gif="drag">drag performer</a>, and
+        <a class="intro-link" xlink:href="#" data-gif="vers">vers top</a>
       </textPath>
     </text>
   </svg>
   <div id="hover-gifs">
-    <img id="gif-wo" src="{{ '/assets/images/ditto.gif' | relative_url }}" alt="ditto">
-    <img id="gif-poetry" src="{{ '/assets/images/book.gif' | relative_url }}" alt="book">
-    <img id="gif-drag" src="{{ '/assets/images/pearls.gif' | relative_url }}" alt="pearls">
-    <img id="gif-vers" src="{{ '/assets/images/banana.gif' | relative_url }}" alt="banana">
-
+    <img src="{{ '/assets/images/ditto.gif' | relative_url }}" alt="ditto" data-gif="wo">
+    <img src="{{ '/assets/images/book.gif' | relative_url }}" alt="book" data-gif="poetry">
+    <img src="{{ '/assets/images/pearls.gif' | relative_url }}" alt="pearls" data-gif="drag">
+    <img src="{{ '/assets/images/banana.gif' | relative_url }}" alt="banana" data-gif="vers">
   </div>
 </div>
 
 <script>
-  function showGif(id) {
-    // Generate a percentage between 20% and 80%
-    var posX = (Math.random() * 60) + 20;
-    var posY = (Math.random() * 60) + 20;
-    const gif = document.getElementById(id);
-    gif.style.cssText = `left: ${posX}%;
-                         top: ${posY}%;
-                         display: block;`;
-  };
+  $(document).ready(function() {
+    function registerEvents() {
+      $(".intro-link")
+        .on("mouseenter", showGif)
+        .on("mouseout", hideGif);
+    };
 
-  function hideGif(id) {
-    const gif = document.getElementById(id);
-    // Remove all inline styles
-    gif.style.cssText = null;
-  };
+    function getRandomPercentage() {
+      // Generate a percentage between 20% and 80%
+      return (Math.random() * 60) + 20;
+    }
+
+    function showGif() {
+      var posX = getRandomPercentage(),
+          posY = getRandomPercentage(),
+          gifName = $(this).data('gif');
+
+      $(`#hover-gifs img[data-gif="${gifName}"`).css({
+        "left": posX + "%",
+        "top": posY + "%",
+        "display": "block"
+      })
+    };
+
+    function hideGif() {
+      var gifName = $(this).data('gif');
+      $(`#hover-gifs img[data-gif="${gifName}"`).css("display", "none");
+    }
+
+    registerEvents();
+  });
 </script>
