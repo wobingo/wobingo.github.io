@@ -61,7 +61,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.8.3)
   jekyll-seo-tag (~> 2.1)
-  tzinfo-data
 
 BUNDLED WITH
    1.16.3

@@ -1,7 +1,5 @@
 #bio {
   min-height: 100vh;
-  width: 80%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
 
@@ -10,15 +8,11 @@
     flex: 1;
   }
 
-  .bio-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
   .bio-sentences {
     p {
       font-size: 2em;
       display: none;
+      margin: 0;
       &.active {
         display: block;
       }
@@ -94,6 +88,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   display: flex;
   flex-direction: column;
   font-family: $secondary-font-family;
+  user-select: none;
 
   .stepper-label {
     text-align: center;
@@ -125,7 +120,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
       outline: 0;
 
       &::-webkit-slider-runnable-track {
-        background: lighten($track-color, $contrast);
+        background: $track-color;
       }
 
       &::-ms-fill-lower {
@@ -133,7 +128,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
       }
 
       &::-ms-fill-upper {
-        background: lighten($track-color, $contrast);
+        background: $track-color;
       }
     }
 

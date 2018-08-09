@@ -2,6 +2,15 @@
 layout: default
 ---
 
-{%- include bio.html -%}
+<div id="about">
+  <div class="about-image">
+    <img src="{{ '/assets/images/wochan_haleyvaracallo.jpg' | relative_url }}" alt="portrait of the author">
+  </div>
+  <div class="about-content">
+    {%- include bio.html -%}
 
-{%- include faq.html -%}
+    {%- include faq.html -%}
+
+    <a href="" class="button-download">Download Press Kit</a>
+  </div>
+</div>

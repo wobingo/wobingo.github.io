@@ -1,0 +1,37 @@
+#about {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+
+  .about-image, .about-content {
+    flex: 1;
+  }
+
+  .about-image {
+    z-index: -1;
+    img {
+      position: fixed;
+      max-height: 100vh;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .button-download {
+    background: $color-text;
+    display: block;
+    padding: 20px;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    margin: 120px 40px;
+    box-shadow: 8px 8px 0 $color-white;
+    font-size: 1.2em;
+    &:hover {
+      transform: translate3d(-4px, -4px, 0);
+      box-shadow: 12px 12px 0 $color-white;
+    }
+  }
+}
