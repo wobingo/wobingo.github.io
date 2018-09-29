@@ -1,10 +1,12 @@
 #items {
   .item {
     position: absolute;
+    max-width: 160px;
+    transition: transform 0.05s ease-in;
+    @extend %cursor-collect;
 
     &:hover {
       transform: scale(1.1) rotate(3deg);
-      @extend %cursor-pointer;
     }
 
     &:active {

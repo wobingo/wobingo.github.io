@@ -26,3 +26,9 @@
   cursor: url(images/cursor-pointer.svg) 13 2, pointer; /* FF */
   cursor: -webkit-image-set(url(images/cursor-pointer.png) 1x, url(images/cursor-pointer@2x.png) 2x) 13 2, pointer;
 }
+
+%cursor-collect {
+  cursor: url(images/cursor-collect.png) 13 15, pointer; /* Legacy */
+  cursor: url(images/cursor-collect.svg) 13 15, pointer; /* FF */
+  cursor: -webkit-image-set(url(images/cursor-collect.png) 1x, url(images/cursor-collect@2x.png) 2x) 13 15, pointer;
+}

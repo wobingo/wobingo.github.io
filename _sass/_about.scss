@@ -1,37 +1,42 @@
 #about {
   display: flex;
-  max-width: 80%;
   margin: 0 auto;
 
   .about-image, .about-content {
     flex: 1;
+    margin: 0 6%;
   }
 
   .about-image {
     z-index: -1;
+    margin-left: 3%;
     img {
       position: fixed;
-      max-height: 100vh;
+      max-height: 90vh;
       max-width: 100%;
-      margin: 0 auto;
+      margin: 5vh auto;
     }
   }
 
+  .about-content {
+    margin-right: 3%;
+  }
+
   .button-download {
-    background: $color-text;
+    background: $color-white;
+    border: 3px solid $color-text;
     display: block;
     padding: 20px;
-    color: $color-white;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-align: center;
     font-family: "Space Mono", monospace;
     margin: 120px 40px;
-    box-shadow: 8px 8px 0 $color-white;
-    font-size: 1.2em;
+    box-shadow: 8px 8px 0 $color-text;
+    font-size: 1.4em;
     &:hover {
       transform: translate3d(-4px, -4px, 0);
-      box-shadow: 12px 12px 0 $color-white;
+      box-shadow: 12px 12px 0 $color-text;
     }
   }
 }

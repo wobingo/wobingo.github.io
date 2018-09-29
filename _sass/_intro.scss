@@ -19,10 +19,10 @@
       text-decoration: underline;
       fill: inherit;
       stroke: inherit;
+      @extend %cursor-pointer;
 
       &:hover {
         fill: $color-secondary;
-        @extend %cursor-pointer;
       }
     }
   }

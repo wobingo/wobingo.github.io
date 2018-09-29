@@ -10,21 +10,32 @@
   a {
     display: block;
     &:hover {
-      transform: rotate(6deg);
       svg #wordmark {
         fill: blue;
-        path {
-          animation: 0.1s wiggle infinite;
-        }
       }
-    }
-    &:active {
-      transform: scale(0.9);
     }
   }
 
   svg #wordmark {
     fill: red;
+    path {
+      animation: 0.8s jump infinite alternate ease-in-out;
+      &#W { animation-delay: 0s; }
+      &#O { animation-delay: 0.1s; }
+      &#C { animation-delay: 0.3s; }
+      &#H { animation-delay: 0.4s; }
+      &#A { animation-delay: 0.5s; }
+      &#N { animation-delay: 0.6s; }
+    }
+  }
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(4px);
   }
 }
 
@@ -45,6 +56,9 @@
 
   .page-link {
     padding: 12px;
+    &:hover {
+      transform: scale(1.2) rotate(6deg);
+    }
   }
 
   @include media-query($on-palm) {
