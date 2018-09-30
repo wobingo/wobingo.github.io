@@ -19,23 +19,23 @@
   svg #wordmark {
     fill: red;
     path {
-      animation: 0.8s jump infinite alternate ease-in-out;
-      &#W { animation-delay: 0s; }
-      &#O { animation-delay: 0.1s; }
-      &#C { animation-delay: 0.3s; }
-      &#H { animation-delay: 0.4s; }
-      &#A { animation-delay: 0.5s; }
-      &#N { animation-delay: 0.6s; }
+      animation: 4s pulse infinite alternate ease-in-out;
+      &#W { animation-delay: -5s; animation-duration: 3.2s; }
+      &#O { animation-delay: -4s; animation-duration: 3.2s; }
+      &#C { animation-delay: -3s; }
+      &#H { animation-delay: -2s; }
+      &#A { animation-delay: -1s; }
+      &#N { animation-delay: 0s; }
     }
   }
 }
 
-@keyframes jump {
+@keyframes pulse {
   from {
-    transform: translateY(0);
+    transform: scale(1) translateY(0) translateX(0) skewX(0) skewY(0);
   }
   to {
-    transform: translateY(4px);
+    transform: scale(0.9) translateY(10px) translateX(2px) skewX(5deg) skewY(-2deg);
   }
 }
 
@@ -56,8 +56,30 @@
 
   .page-link {
     padding: 12px;
+    display: inline-block;
+    transform: rotate(-6deg);
+    text-decoration: none;
+    position: relative;
+    &:after {
+      // Underline
+      content: '';
+      width: calc(100% - 24px);
+      height: 3px;
+      background-color: $color-primary;
+      position: absolute;
+      bottom: 14px;
+      left: 12px;
+      opacity: 0;
+      transform: translateY(-3px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
     &:hover {
-      transform: scale(1.2) rotate(6deg);
+      transform: scale(1.2) rotate(-6deg);
+      &:after {
+        background-color: $color-secondary;
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 

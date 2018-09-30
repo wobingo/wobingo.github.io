@@ -7,6 +7,7 @@ var inventoryCount;
 // - Add inventory descriptions
 // - Enable item collection
 // - Create an easier way to manage items and descriptions
+// - Revert cursor back to default on collect
 
 function init() {
   Array.prototype.forEach.call(items, function(item) {
@@ -26,7 +27,6 @@ function init() {
 }
 
 function collectItem(item) {
-  console.log("clicked" + item);
   item.style.cssText = null;
   increaseInventoryCount();
 }
