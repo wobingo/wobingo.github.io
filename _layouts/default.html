@@ -1,11 +1,11 @@
 {%- include head.html -%}
 
-{%- include header.html -%}
-
 <main class="page-content" aria-label="Content">
-  {{ content }}
-</main>
+  {%- include header.html -%}
 
-{%- include items.html -%}
+  {{ content }}
+
+  {%- include about.html -%}
+</main>
 
 {%- include footer.html -%}

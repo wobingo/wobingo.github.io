@@ -1,0 +1,71 @@
+.events-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  height: 4rem;
+  background-color: $color-white;
+  animation: 0.2s popUp cubic-bezier(.5,0,.4,1.3);
+  animation-delay: 7.5s;
+  animation-fill-mode: both;
+  &:hover .events {
+    animation-play-state: paused;
+  }
+}
+
+.events-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-white;
+  height: 4rem;
+  line-height: 4rem;
+  background-color: $color-primary;
+  padding: 0 1.5rem;
+  z-index: 5;
+  transform: none;
+}
+
+.events {
+  height: 4rem;
+  width: 100%;
+  overflow: hidden;
+  line-height: 4rem;
+  font-family: $secondary-font-family;
+  .event {
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    * {
+      display: inline-block;
+    }
+    &:hover {
+      text-decoration: none;
+      * {
+        text-decoration: underline;
+      }
+    }
+    .event-date,
+    .event-location {
+      opacity: 0.5;
+    }
+    .event-date {
+      margin-right: 1rem;
+    }
+    .event-location {
+      font-style: italic;
+      &:before {
+        content: '—at ';
+      }
+    }
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

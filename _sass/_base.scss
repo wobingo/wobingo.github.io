@@ -1,9 +1,19 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -11,28 +21,26 @@ dl, dd, ol, ul, figure {
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-
-/**
- * Basic styling
- */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $color-text;
   background-color: $color-bg;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
   font-kerning: normal;
-  display: flex;
   min-height: 100vh;
-  flex-direction: column;
-  @extend %cursor-default;
+  overflow: hidden;
+  @include cursor(default);
 }
 
 ::selection {
@@ -46,80 +54,87 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
 
-
-
-/**
- * `main` element
- */
 main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  display: block;
 }
 
-
-
-/**
- * Images
- */
 img {
   max-width: 100%;
   max-height: 100%;
   vertical-align: middle;
 }
 
-
-
-/**
- * Figures
- */
-figure > img {
-  display: block;
+figure {
+  position: relative;
+  >img {
+    display: block;
+  }
+  figcaption {
+    color: $color-primary;
+    font-size: $small-font-size;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    transform: rotate(88deg);
+    transform-origin: center left;
+    z-index: 5;
+  }
 }
 
-figcaption {
-  font-size: $small-font-size;
-}
-
-
-
-/**
- * Lists
- */
-ul, ol {
+ul,
+ol {
   margin-left: $spacing-unit;
 }
 
 li {
-  > ul,
-  > ol {
+  >ul,
+  >ol {
     margin-bottom: 0;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $base-font-weight;
+}
+
+h2 {
+  display: inline-block;
+  transform: rotate(-5deg);
 }
 
 a {
   color: $color-primary;
   text-decoration: none;
-  @extend %cursor-pointer;
-
+  @include cursor(pointer);
   &:hover {
     color: $color-secondary;
     text-decoration: underline;
   }
 }
 
-/**
- * Wrapper
- */
 .wrapper {
   max-width: 80%;
   margin-right: auto;
@@ -129,41 +144,16 @@ a {
   @extend %clearfix;
 }
 
-
-
-/**
- * Clearfix
- */
 %clearfix:after {
   content: "";
   display: table;
   clear: both;
 }
 
-
-
-/**
- * Icons
- */
-
-.svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    padding-right: 5px;
-    vertical-align: text-top;
-}
-
-.social-media-list {
-  li + li {
-    padding-top: 5px;
-  }
-}
-
-
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
+  /* 16:9 */
   padding-top: 25px;
   height: 0;
   z-index: 0;
@@ -177,7 +167,6 @@ a {
     height: 100%;
   }
 }
-
 
 .grain {
   width: 100vw;
