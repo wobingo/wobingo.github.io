@@ -3,8 +3,6 @@
 let g = "font-size:20px; font-weight:bold;";
 console.log("%c🖌💻 Site designed and coded with 💖 by Kyle Decker: https://kyledecker.me", g);
 
-
-
 $(document).ready(function () {
 
   //
@@ -44,7 +42,7 @@ $(document).ready(function () {
     $stepper;
 
   var ACTIVE_CLASS = "active",
-    DEFAULT_STEPPER_VALUE = 3;
+    DEFAULT_STEPPER_VALUE = 2;
 
   function registerBioEvents() {
     $sentences = $(".bio p");
@@ -104,7 +102,7 @@ $(document).ready(function () {
   //
 
   $(".about-toggle").click(function() {
-    $(".about").toggleClass("visible");
+    $(".page-content").toggleClass("sidebar-open");
   });
 });
 

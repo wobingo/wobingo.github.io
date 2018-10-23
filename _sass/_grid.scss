@@ -1,0 +1,33 @@
+.page-content {
+  display: grid;
+  width: calc(100vw + #{$sidebar-width});
+  height: 100vh;
+  grid-template-columns: minmax(0, 1fr) $sidebar-width;
+  grid-template-rows: 4rem 1fr 4rem;
+  grid-template-areas:
+    "header about"
+    "main   about"
+    "events about";
+  overflow: hidden;
+  transition: 0.2s width ease-in;
+  will-change: width;
+  &.sidebar-open {
+    width: 100vw;
+  }
+}
+
+.page-header {
+  grid-area: header;
+}
+
+#intro {
+  grid-area: main;
+}
+
+.events-wrapper {
+  grid-area: events;
+}
+
+.about {
+  grid-area: about;
+}

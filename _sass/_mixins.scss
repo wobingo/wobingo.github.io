@@ -28,5 +28,9 @@
     cursor: url(images/cursor-resize-h.png) 23 17, ew-resize; /* Legacy */
     cursor: url(images/cursor-resize-h.svg) 23 17, ew-resize; /* FF */
     cursor: -webkit-image-set(url(images/cursor-resize-h.png) 1x, url(images/cursor-resize-h@2x.png) 2x) 23 17, ew-resize;
+  } @else if $cursor == 'external' {
+    cursor: url(images/cursor-external.png) 13 6, pointer; /* Legacy */
+    cursor: url(images/cursor-external.svg) 13 6, pointer; /* FF */
+    cursor: -webkit-image-set(url(images/cursor-external.png) 1x, url(images/cursor-external@2x.png) 2x) 13 6, pointer;
   }
 }
