@@ -17,20 +17,20 @@
 
 @mixin cursor($cursor) {
   @if $cursor == 'default' {
-    cursor: url(images/cursor-default.png) 3 0, auto; /* Legacy */
-    cursor: url(images/cursor-default.svg) 3 0, auto; /* FF */
-    cursor: -webkit-image-set(url(images/cursor-default.png) 1x, url(images/cursor-default@2x.png) 2x) 3 0, auto;
+    cursor: url(images/cursors/cursor-default.png) 3 0, auto; /* Legacy */
+    cursor: url(images/cursors/cursor-default.svg) 3 0, auto; /* FF */
+    cursor: -webkit-image-set(url(images/cursors/cursor-default.png) 1x, url(images/cursors/cursor-default@2x.png) 2x) 3 0, auto;
   } @else if $cursor == 'pointer' {
-    cursor: url(images/cursor-pointer.png) 13 2, pointer; /* Legacy */
-    cursor: url(images/cursor-pointer.svg) 13 2, pointer; /* FF */
-    cursor: -webkit-image-set(url(images/cursor-pointer.png) 1x, url(images/cursor-pointer@2x.png) 2x) 13 2, pointer;
+    cursor: url(images/cursors/cursor-pointer.png) 13 2, pointer; /* Legacy */
+    cursor: url(images/cursors/cursor-pointer.svg) 13 2, pointer; /* FF */
+    cursor: -webkit-image-set(url(images/cursors/cursor-pointer.png) 1x, url(images/cursors/cursor-pointer@2x.png) 2x) 13 2, pointer;
   } @else if $cursor == 'resize-h' {
-    cursor: url(images/cursor-resize-h.png) 23 17, ew-resize; /* Legacy */
-    cursor: url(images/cursor-resize-h.svg) 23 17, ew-resize; /* FF */
-    cursor: -webkit-image-set(url(images/cursor-resize-h.png) 1x, url(images/cursor-resize-h@2x.png) 2x) 23 17, ew-resize;
+    cursor: url(images/cursors/cursor-resize-h.png) 23 17, ew-resize; /* Legacy */
+    cursor: url(images/cursors/cursor-resize-h.svg) 23 17, ew-resize; /* FF */
+    cursor: -webkit-image-set(url(images/cursors/cursor-resize-h.png) 1x, url(images/cursors/cursor-resize-h@2x.png) 2x) 23 17, ew-resize;
   } @else if $cursor == 'external' {
-    cursor: url(images/cursor-external.png) 13 6, pointer; /* Legacy */
-    cursor: url(images/cursor-external.svg) 13 6, pointer; /* FF */
-    cursor: -webkit-image-set(url(images/cursor-external.png) 1x, url(images/cursor-external@2x.png) 2x) 13 6, pointer;
+    cursor: url(images/cursors/cursor-external.png) 13 6, pointer; /* Legacy */
+    cursor: url(images/cursors/cursor-external.svg) 13 6, pointer; /* FF */
+    cursor: -webkit-image-set(url(images/cursors/cursor-external.png) 1x, url(images/cursors/cursor-external@2x.png) 2x) 13 6, pointer;
   }
 }

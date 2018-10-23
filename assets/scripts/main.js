@@ -23,12 +23,11 @@ $(document).ready(function () {
       posY = getRandomPercentage(),
       gifName = $(this).data('gif');
 
-    $('#hover-gifs img[data-gif]').css("display", "none");
+    $('#hover-gifs video[data-gif]').css("opacity", "0");
 
-    $(`#hover-gifs img[data-gif="${gifName}"`).css({
-      "left": posX + "%",
-      "top": posY + "%",
-      "display": "block"
+    $(`#hover-gifs video[data-gif="${gifName}"`).css({
+      "transform": `translate3d(calc(${posX}vw - 50%), calc(${posY}vh - 50%), 0)`,
+      "opacity": "1"
     })
   };
 
@@ -42,7 +41,7 @@ $(document).ready(function () {
     $stepper;
 
   var ACTIVE_CLASS = "active",
-    DEFAULT_STEPPER_VALUE = 2;
+      DEFAULT_STEPPER_VALUE = 3;
 
   function registerBioEvents() {
     $sentences = $(".bio p");

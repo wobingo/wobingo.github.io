@@ -15,9 +15,17 @@
     <source src="{{ '/assets/audio/fart.wav' | relative_url }}" type="audio/wav">
   </audio>
   <div id="hover-gifs">
-    <img src="{{ '/assets/images/ditto.gif' | relative_url }}" alt="ditto" data-gif="wo">
-    <img src="{{ '/assets/images/book.gif' | relative_url }}" alt="book" data-gif="poetry">
-    <img src="{{ '/assets/images/pearls.gif' | relative_url }}" alt="pearls" data-gif="drag">
-    <img src="{{ '/assets/images/banana.gif' | relative_url }}" alt="banana" data-gif="vers">
+    <video autoplay loop muted playsinline data-gif="wo">
+      <source src="{{ '/assets/images/ditto.mp4' | relative_url }}" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline data-gif="poetry">
+      <source src="{{ '/assets/images/book.mp4' | relative_url }}" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline data-gif="drag">
+      <source src="{{ '/assets/images/pearls.mp4' | relative_url }}" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline data-gif="vers">
+        <source src="{{ '/assets/images/banana.mp4' | relative_url }}" type="video/mp4">
+    </video>
   </div>
 </div>

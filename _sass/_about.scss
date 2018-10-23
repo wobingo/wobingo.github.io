@@ -3,11 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  // transform: translate3d(100%, 0, 0);
-  // transition: 0.2s transform cubic-bezier(.5,0,.4,1.3);
-  // &.visible {
-  //   transform: translate3d(0, 0, 0);
-  // }
 
   .about-header {
     display: flex;
@@ -34,14 +29,27 @@
 .bio {
   font-family: $secondary-font-family;
   margin-bottom: $spacing-unit;
+  position: relative;
 
   p {
     font-size: 1.1em;
     margin: 0 0 1.6em 0;
-    display: none;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s $cubic-bezier;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
     &.active {
-      display: block;
-      animation: 0.3s bioSwitch ease-in;
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition-delay: 0.2s;
+    }
+    a {
+      text-decoration: underline;
+      color: $color-text;
     }
   }
 }

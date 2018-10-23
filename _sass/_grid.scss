@@ -8,11 +8,15 @@
     "header about"
     "main   about"
     "events about";
-  overflow: hidden;
-  transition: 0.2s width ease-in;
-  will-change: width;
+  transition: 0.2s transform ease-in;
+  will-change: transform;
+  // Fix flickering and jitteryness, if we can
+  backface-visibility: hidden;
+  perspective: 1000;
+  // Enable hardware acceleration
+  transform: translate3d(0, 0, 0);
   &.sidebar-open {
-    width: 100vw;
+    transform: translate3d(-#{$sidebar-width}, 0, 0);
   }
 }
 

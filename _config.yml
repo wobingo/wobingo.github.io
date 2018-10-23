@@ -16,11 +16,10 @@
 title: Wo Chan
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  C'EST QUI???
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+  Wo Chan is a poet, drag performer, and vers top.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://wo.bingo" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: wochanofficial
 
 # Build settings
 markdown: kramdown
