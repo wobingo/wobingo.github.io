@@ -3,6 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  &:after {
+    // Extra whitespace for bounce transition
+    content: '';
+    display: block;
+    background: $color-white;
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    right: -80px;
+    top: 0;
+  }
 
   .about-header {
     display: flex;
@@ -15,6 +26,9 @@
       text-decoration: none;
       line-height: 0;
       height: 1rem;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 
@@ -27,41 +41,38 @@
 }
 
 .bio {
-  font-family: $secondary-font-family;
   margin-bottom: $spacing-unit;
   position: relative;
+  height: auto;
 
-  p {
-    font-size: 1.1em;
-    margin: 0 0 1.6em 0;
+  .bio-item {
     position: absolute;
     top: 0;
-    transition: all 0.2s $cubic-bezier;
+    transition: 0.2s $cubic-bezier;
     opacity: 0;
-    visibility: hidden;
+    display: none;
     transform: translateY(10px);
     &.active {
       position: relative;
       opacity: 1;
-      visibility: visible;
+      display: block;
       transform: translateY(0);
-      transition-delay: 0.2s;
+      transition-delay: 0.2s, 0s;
     }
-    a {
-      text-decoration: underline;
-      color: $color-text;
+    p {
+      margin: 0 0 $spacing-unit 0;
+      font-size: 1.1em;
+      font-family: $secondary-font-family;
+      a {
+        text-decoration: underline;
+        color: $color-text;
+      }
     }
-  }
-}
-
-@keyframes bioSwitch {
-  from {
-    opacity: 0;
-    transform: translate3d(-10px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+    figure {
+      margin-left: -$spacing-unit/2;
+      margin-right: -$spacing-unit/2;
+      margin-bottom: $spacing-unit;
+    }
   }
 }
 

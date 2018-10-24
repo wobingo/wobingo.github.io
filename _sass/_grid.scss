@@ -3,12 +3,12 @@
   width: calc(100vw + #{$sidebar-width});
   height: 100vh;
   grid-template-columns: minmax(0, 1fr) $sidebar-width;
-  grid-template-rows: 4rem 1fr 4rem;
+  grid-template-rows: 4rem 1fr 3rem;
   grid-template-areas:
     "header about"
     "main   about"
     "events about";
-  transition: 0.2s transform ease-in;
+  transition: 0.4s transform cubic-bezier(0.68, -0.55, 0.265, 1.55);
   will-change: transform;
   // Fix flickering and jitteryness, if we can
   backface-visibility: hidden;

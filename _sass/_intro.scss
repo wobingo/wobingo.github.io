@@ -9,6 +9,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  user-select: none;
 
   svg {
     display: block;
@@ -28,53 +29,57 @@
     }
 
     .letter1 { animation-delay: 0; }
-      .letter2 { animation-delay: 0.08s; }
-      .letter3 { animation-delay: 0.18s; } // space
-      .letter4 { animation-delay: 0.20s; }
-      .letter5 { animation-delay: 0.28s; }
-      .letter6 { animation-delay: 0.36s; }
-      .letter7 { animation-delay: 0.40s; }
-      .letter8 { animation-delay: 0.46s; } // space
-      .letter9 { animation-delay: 0.48s; }
-      .letter10 { animation-delay: 0.54s; } 
-      .letter11 { animation-delay: 0.60s; } // space
-      .letter12 { animation-delay: 0.64s; }
-      .letter13 { animation-delay: 0.66s; } // space
-      .letter14 { animation-delay: 0.68s; }
-      .letter15 { animation-delay: 0.74s; }
-      .letter16 { animation-delay: 0.80s; }
-      .letter17 { animation-delay: 0.86s; }
-      .letter18 { animation-delay: 0.94s; } 
-      .letter19 { animation-delay: 1.10s; } // space
-      .letter20 { animation-delay: 1.20s; }
-      .letter21 { animation-delay: 1.24s; }
-      .letter22 { animation-delay: 1.32s; }
-      .letter23 { animation-delay: 1.36s; }
-      .letter24 { animation-delay: 1.40s; } // space
-      .letter25 { animation-delay: 1.48s; }
-      .letter26 { animation-delay: 1.54s; }
-      .letter27 { animation-delay: 1.60s; }
-      .letter28 { animation-delay: 1.66s; }
-      .letter29 { animation-delay: 1.70s; }
-      .letter30 { animation-delay: 1.74s; }
-      .letter31 { animation-delay: 1.78s; }
-      .letter32 { animation-delay: 1.82s; }
-      .letter33 { animation-delay: 1.84s; }
-      .letter34 { animation-delay: 1.90s; }
-      .letter35 { animation-delay: 2.00s; } // space
-      .letter36 { animation-delay: 2.10s; }
-      .letter37 { animation-delay: 2.20s; }
-      .letter38 { animation-delay: 2.40s; }
-      .letter39 { animation-delay: 2.60s; } // space
-      .letter40 { animation-delay: 2.80s; }
-      .letter41 { animation-delay: 3.00s; }
-      .letter42 { animation-delay: 3.40s; }
-      .letter43 { animation-delay: 3.80s; }
-      .letter44 { animation-delay: 4.00s; } // space
-      .letter45 { animation-delay: 4.40s; }
-      .letter46 { animation-delay: 5.10s; }
-      .letter47 { animation-delay: 6.00s; }
-      .letter48 { animation-delay: 7.40s; }
+    .letter2 { animation-delay: 0.08s; }
+    .letter3 { animation-delay: 0.18s; } // space
+    .letter4 { animation-delay: 0.20s; }
+    .letter5 { animation-delay: 0.28s; }
+    .letter6 { animation-delay: 0.36s; }
+    .letter7 { animation-delay: 0.40s; }
+    .letter8 { animation-delay: 0.46s; } // space
+    .letter9 { animation-delay: 0.48s; }
+    .letter10 { animation-delay: 0.54s; } 
+    .letter11 { animation-delay: 0.60s; } // space
+    .letter12 { animation-delay: 0.64s; }
+    .letter13 { animation-delay: 0.66s; } // space
+    .letter14 { animation-delay: 0.68s; }
+    .letter15 { animation-delay: 0.74s; }
+    .letter16 { animation-delay: 0.80s; }
+    .letter17 { animation-delay: 0.86s; }
+    .letter18 { animation-delay: 0.94s; } 
+    .letter19 { animation-delay: 1.10s; } // space
+    .letter20 { animation-delay: 1.20s; }
+    .letter21 { animation-delay: 1.24s; }
+    .letter22 { animation-delay: 1.32s; }
+    .letter23 { animation-delay: 1.36s; }
+    .letter24 { animation-delay: 1.40s; } // space
+    .letter25 { animation-delay: 1.48s; }
+    .letter26 { animation-delay: 1.54s; }
+    .letter27 { animation-delay: 1.60s; }
+    .letter28 { animation-delay: 1.66s; }
+    .letter29 { animation-delay: 1.70s; }
+    .letter30 { animation-delay: 1.74s; }
+    .letter31 { animation-delay: 1.78s; }
+    .letter32 { animation-delay: 1.82s; }
+    .letter33 { animation-delay: 1.84s; }
+    .letter34 { animation-delay: 1.90s; }
+    .letter35 { animation-delay: 2.00s; } // space
+    .letter36 { animation-delay: 2.10s; }
+    .letter37 { animation-delay: 2.20s; }
+    .letter38 { animation-delay: 2.40s; }
+    .letter39 { animation-delay: 2.60s; } // space
+    .letter40 { animation-delay: 2.80s; }
+    .letter41 { animation-delay: 3.00s; }
+    .letter42 { animation-delay: 3.40s; }
+    .letter43 { animation-delay: 3.80s; }
+    .letter44 { animation-delay: 4.00s; } // space
+    .letter45 { animation-delay: 4.40s; }
+    .letter46 { animation-delay: 5.10s; }
+    .letter47 { animation-delay: 6.00s; }
+    .letter48 { animation-delay: 7.40s; }
+
+    .fartletter:active {
+      fill: $color-secondary;
+    }
   }
 
   #hover-gifs {
@@ -97,8 +102,10 @@
 @keyframes appear {
   from {
     opacity: 0;
+    visibility: hidden;
   }
   to {
     opacity: 1;
+    visibility: visible;
   }
 }

@@ -95,6 +95,9 @@ figure {
     transform: rotate(88deg);
     transform-origin: center left;
     z-index: 5;
+    a:hover {
+      color: $color-primary;
+    }
   }
 }
 

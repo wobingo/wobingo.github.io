@@ -44,7 +44,7 @@ $(document).ready(function () {
       DEFAULT_STEPPER_VALUE = 3;
 
   function registerBioEvents() {
-    $sentences = $(".bio p");
+    $sentences = $(".bio-item");
     $stepper = $("#bio-stepper");
 
     $stepper.on("input", function () {
@@ -87,12 +87,16 @@ $(document).ready(function () {
   });
 
   //
-  // Fart
+  // Fartz
   //
 
   var $fart = $(".fart");
   $(".letter48").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
   function(e) {
+    $fart[0].play();
+  });
+
+  $(".fartletter").click(function() {
     $fart[0].play();
   });
 

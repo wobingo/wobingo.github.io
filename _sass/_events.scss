@@ -1,32 +1,31 @@
 .events-wrapper {
   background-color: $color-white;
-  animation: 0.2s popUp $cubic-bezier;
+  animation: 0.4s popUp $cubic-bezier;
   animation-delay: 7.5s;
   animation-fill-mode: both;
+  display: flex;
+  line-height: 3rem;
 }
 
 .events-header {
-  position: absolute;
-  top: 0;
-  left: 0;
   color: $color-white;
-  height: 4rem;
-  line-height: 4rem;
   background-color: $color-primary;
   padding: 0 1.5rem;
-  z-index: 5;
   transform: none;
+  margin: 0;
+}
+
+.events-header, .event {
+  font-size: 1.3rem;
 }
 
 .events {
-  height: 4rem;
-  width: 100%;
+  flex: 1;
   overflow: hidden;
-  line-height: 4rem;
   font-family: $secondary-font-family;
+  
   .event {
     padding: 0 2rem;
-    font-size: 1.5rem;
     display: inline-flex;
     &:hover {
       text-decoration: none;
