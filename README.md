@@ -1,2 +1,1 @@
-# wochan
-Poet, drag performer, vers top.
+my mom let me have a website
