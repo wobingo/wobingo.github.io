@@ -33,19 +33,6 @@
         text-decoration: underline;
       }
     }
-    .event-date,
-    .event-location {
-      opacity: 0.5;
-    }
-    .event-date {
-      margin-right: 1rem;
-    }
-    .event-location {
-      font-style: italic;
-      &:before {
-        content: '—at ';
-      }
-    }
   }
 }
 
