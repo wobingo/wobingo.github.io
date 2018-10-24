@@ -35,8 +35,7 @@
   .about-content {
     flex: 1;
     overflow-y: scroll;
-    padding: $spacing-unit;
-    padding-top: 0;
+    padding: 0 $spacing-unit;
   }
 }
 
@@ -59,20 +58,21 @@
       transform: translateY(0);
       transition-delay: 0.2s, 0s;
     }
-    p {
-      margin: 0 0 $spacing-unit 0;
-      font-size: 1.1em;
-      font-family: $secondary-font-family;
-      a {
-        text-decoration: underline;
-        color: $color-text;
-      }
+  }
+
+  p, .colophon {
+    margin: 0 0 $spacing-unit 0;
+    font-size: 1.1em;
+    font-family: $secondary-font-family;
+    a {
+      text-decoration: underline;
+      color: $color-text;
     }
-    figure {
-      margin-left: -$spacing-unit/2;
-      margin-right: -$spacing-unit/2;
-      margin-bottom: $spacing-unit;
-    }
+  }
+  figure {
+    margin-left: -$spacing-unit/2;
+    margin-right: -$spacing-unit/2;
+    margin-bottom: $spacing-unit;
   }
 }
 
