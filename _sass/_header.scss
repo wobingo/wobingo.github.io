@@ -56,6 +56,8 @@
   margin: 20px;
   animation: 0.2s popIn $cubic-bezier both;
   animation-delay: 7.5s;
+  display: flex;
+  justify-content: flex-end;
 
   .nav-trigger {
     display: none;
@@ -76,21 +78,20 @@
   }
 
   .page-link {
-    font-size: 24px;
-    padding: 12px;
-    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0.8rem;
     transform: rotate(-6deg);
     text-decoration: none;
     position: relative;
     &:after {
       // Underline
       content: '';
-      width: calc(100% - 24px);
+      width: calc(100% - 1.6rem);
       height: 3px;
       background-color: $color-primary;
       position: absolute;
-      bottom: 14px;
-      left: 12px;
+      bottom: 0.85rem;
+      left: 0.8rem;
       opacity: 0;
       transform: translateY(-3px);
       transition: opacity 0.2s ease, transform 0.2s ease;
@@ -108,4 +109,12 @@
       outline: none;
     }
   } 
+}
+
+@media screen and (max-width: 630px) {
+  .site-nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
 }

@@ -28,8 +28,10 @@ html {
   box-sizing: inherit;
 }
 
-body {
+html, body {
   font-size: 16px;
+  @media screen and (max-width: 900px) { font-size: 15px; }
+  @media screen and (max-width: 600px) { font-size: 14px; }
   line-height: $base-line-height;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
@@ -44,18 +46,6 @@ body {
   overflow: hidden;
   @include cursor(default);
 }
-
-@media screen and (max-width: 900px) {
-  font-size: 15px;
- }
-
-@media screen and (max-width: 600px) {
-  font-size: 14px;
-}
-
-@media screen and (max-width: 400px) {
-  font-size: 13px;
- }
 
 ::selection {
   background: $color-primary;
