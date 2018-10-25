@@ -17,6 +17,7 @@ source "https://rubygems.org"
 group :jekyll_plugins do
   gem "jekyll-seo-tag", "~> 2.1"
   gem "github-pages"
+  gem "jekyll-sitemap"
 end
 
 # Performance-booster for watching directories on Windows

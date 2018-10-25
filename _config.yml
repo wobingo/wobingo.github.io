@@ -14,7 +14,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Wo Chan
-email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Wo Chan is a poet, drag performer, and vers top.
 baseurl: "/" # the subpath of your site, e.g. /blog
@@ -25,6 +24,7 @@ twitter_username: wochanofficial
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
