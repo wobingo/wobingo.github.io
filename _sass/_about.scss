@@ -33,9 +33,10 @@
       font-size: 3rem;
       margin-top: -1rem;
       line-height: 1;
-      height: auto;
       background: transparent;
       border: none;
+      height: auto;
+      width: auto;
       font-family: $base-font-family;
       color: $color-primary;
       @include cursor(pointer);
