@@ -29,6 +29,7 @@ html {
 }
 
 html, body {
+  position: fixed;
   font-size: 16px;
   height: 100%;
   @media screen and (max-width: 900px) { font-size: 15px; }
