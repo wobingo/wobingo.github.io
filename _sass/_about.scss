@@ -26,14 +26,14 @@
   .about-header {
     display: flex;
     align-items: center;
-    padding: $spacing-unit;
+    padding: $spacing-unit / 2 $spacing-unit;
 
     .about-toggle {
-      display: inline-block;
       margin-left: $spacing-unit;
       font-size: 3rem;
-      line-height: 0;
-      height: 1rem;
+      margin-top: -1rem;
+      line-height: 1;
+      height: auto;
       background: transparent;
       border: none;
       font-family: $base-font-family;
@@ -172,31 +172,17 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 .bio-stepper {
   flex: 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-family: $secondary-font-family;
-  user-select: none;
-  position: relative;
+  transform: rotate(-5deg);
 
   .stepper-label {
-    position: absolute;
-    text-align: center;
-    transform: rotate(-5deg);
     &.low {
-      top: 0;
-      left: 0;
-      transform-origin: center left;
+      align-self: flex-start;
     }
     &.high {
-      right: 0;
-      bottom: 0;
-      transform-origin: center right;
+      align-self: flex-end;
     }
-  }
-
-  .stepper-wrapper {
-    width: $track-width;
-    padding: 4px 0;
-    transform: rotate(-5deg);
   }
 
   #bio-stepper[type='range'] {
