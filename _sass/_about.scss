@@ -321,7 +321,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 }
 
 .page-content, .about {
-  transition: 0.3s transform ease-in-out;
+  transition: transform 0.3s ease-in-out;
   will-change: transform;
   backface-visibility: hidden;
 }
@@ -329,4 +329,67 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 .page-content {
   transform-origin: left;
   z-index: 29; // 1 below about
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    width: 40vw;
+  }
+  .sidebar-open .page-content {
+    transform: scaleX(0.6);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about {
+    width: 35vw;
+  }
+  .sidebar-open .page-content {
+    transform: scaleX(0.65);
+  }   
+}
+
+@media screen and (max-width: 1100px) {
+  .about {
+    width: 40vw;
+  }
+  .sidebar-open .page-content {
+    transform: scaleX(0.6);
+  }  
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    width: 50vw;
+  }
+  .sidebar-open .page-content {
+    transform: scaleX(0.5);
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .about {
+    width: 60vw;
+  }
+  .sidebar-open .page-content {
+    transform: scaleX(0.4);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .about {
+    width: 70vw;
+  }
+  .sidebar-open .page-content {
+    transform: scaleX(0.3);
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .about {
+    width: 100vw;
+  }
+  .sidebar-open .page-content {
+    transform: scaleX(0);
+  }
 }
