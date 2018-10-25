@@ -180,3 +180,10 @@ img:not([src]) {
     visibility: hidden;
   }
 }
+
+// Fixes MS Edge InteractionObserver bug
+img[data-src],
+img[data-srcset] {
+  display: block;
+  min-height: 1px;
+}

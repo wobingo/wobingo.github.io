@@ -12,7 +12,8 @@ console.log("%c🖌💻 Site designed and coded with 💖 by Kyle Decker: https:
   s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
   w.lazyLoadOptions = {
     elements_selector: ".lazy",
-    to_webp: true
+    to_webp: true,
+    container: document.getElementById('aboutScroll')
   };
   b.appendChild(s);
 }(window, document));
