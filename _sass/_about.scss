@@ -30,13 +30,15 @@
 
     .about-toggle {
       margin-left: $spacing-unit;
-      font-size: 3rem;
       margin-top: -1rem;
+      text-align: center;
+      font-size: 3rem;
       line-height: 1;
       background: transparent;
       border: none;
       height: auto;
       width: auto;
+      padding: 0;
       font-family: $base-font-family;
       color: $color-primary;
       @include cursor(pointer);
