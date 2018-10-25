@@ -54,7 +54,6 @@
 
 .site-nav {
   margin: 20px;
-  font-size: 24px;
   animation: 0.2s popIn $cubic-bezier both;
   animation-delay: 7.5s;
 
@@ -66,7 +65,18 @@
     display: none;
   }
 
+  button {
+    @extend a;
+    background: transparent;
+    border: none;
+    height: auto;
+    width: auto;
+    line-height: inherit;
+    font-family: inherit;
+  }
+
   .page-link {
+    font-size: 24px;
     padding: 12px;
     display: inline-block;
     transform: rotate(-6deg);
@@ -87,11 +97,15 @@
     }
     &:hover {
       transform: scale(1.2) rotate(-6deg);
+      text-decoration: none;
       &:after {
         background-color: $color-secondary;
         opacity: 1;
         transform: translateY(0);
       }
     }
-  }
+    &:focus {
+      outline: none;
+    }
+  } 
 }
