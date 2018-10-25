@@ -387,9 +387,9 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
 @media screen and (max-width: 460px) {
   .about {
-    width: 100vw;
+    width: 90vw;
   }
   .sidebar-open .page-content {
-    transform: scaleX(0);
+    transform: scaleX(0.1);
   }
 }
