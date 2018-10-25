@@ -39,6 +39,7 @@ html, body {
   font-weight: $base-font-weight;
   color: $color-text;
   background-color: $color-bg;
+  overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
