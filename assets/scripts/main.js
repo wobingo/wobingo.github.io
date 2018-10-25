@@ -11,7 +11,8 @@ console.log("%c🖌💻 Site designed and coded with 💖 by Kyle Decker: https:
   s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
   s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
   w.lazyLoadOptions = {
-    elements_selector: ".lazy"
+    elements_selector: ".lazy",
+    to_webp: true
   };
   b.appendChild(s);
 }(window, document));
