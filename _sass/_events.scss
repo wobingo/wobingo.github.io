@@ -1,4 +1,8 @@
 .events-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: $color-white;
   animation: 0.4s popUp $cubic-bezier;
   animation-delay: 7.5s;
@@ -10,6 +14,7 @@
 .events-header {
   color: $color-white;
   background-color: $color-primary;
+  text-align: center;
   padding: 0 1.5rem;
   transform: none;
   margin: 0;
@@ -38,7 +43,7 @@
 
 @keyframes popUp {
   0% {
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 250%, 0);
   }
   100% {
     transform: translate3d(0, 0, 0);
@@ -47,6 +52,9 @@
 
 @media screen and (max-width: 660px) {
   .events-header {
-    display: none;
+    transform: rotate(-6deg);
+    position: absolute;
+    bottom: 3rem;
+    left: 0.5rem;
   }
 }
