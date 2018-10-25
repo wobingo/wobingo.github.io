@@ -1,18 +1,31 @@
+.about-overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  position: fixed;
+  transition: opacity 0.4s ease-in-out;
+}
+
 .about {
   background: $color-white;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  &:after {
-    // Extra whitespace for bounce transition
-    content: '';
-    display: block;
-    background: $color-white;
-    width: 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30vw;
+  z-index: 30;
+  transform: translate3d(#{$sidebar-width}, 0, 0);
+
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     height: 100%;
-    position: absolute;
-    right: -80px;
-    top: 0;
+    transform: translate3d(30%, 0, 0);
+    transition-delay: 0.1s;
   }
 
   .about-header {
@@ -21,13 +34,22 @@
     padding: $spacing-unit;
 
     .about-toggle {
+      display: inline-block;
       margin-left: $spacing-unit;
       font-size: 3rem;
-      text-decoration: none;
       line-height: 0;
       height: 1rem;
+      background: transparent;
+      border: none;
+      font-family: $base-font-family;
+      color: $color-primary;
+      @include cursor(pointer);
       &:hover {
+        color: $color-secondary;
         transform: scale(1.2);
+      }
+      &:focus {
+        outline: none;
       }
     }
   }
@@ -62,7 +84,6 @@
 
   p, .colophon {
     margin: 0 0 $spacing-unit 0;
-    font-size: 1.1em;
     font-family: $secondary-font-family;
     a {
       text-decoration: underline;
@@ -289,5 +310,28 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
       }
     }
   }
+}
 
+.sidebar-open {
+  .about, .about-wrapper {
+    transform: translate3d(0,0,0);
+  }
+  .about-overlay {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .page-content {
+    transform: scaleX(0.7);
+  }
+}
+
+.page-content, .about, .about-wrapper {
+  transition: 0.3s transform ease-in-out;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.page-content {
+  transform-origin: left;
+  z-index: 29; // 1 below about
 }

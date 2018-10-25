@@ -71,6 +71,10 @@ figure,
   margin-bottom: $spacing-unit / 2;
 }
 
+p, blockquote, figcaption {
+  @include cursor(text);
+}
+
 main {
   display: block;
 }

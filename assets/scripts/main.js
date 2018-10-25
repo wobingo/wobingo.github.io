@@ -105,7 +105,7 @@ $(document).ready(function () {
   //
 
   $(".about-toggle").click(function() {
-    $(".page-content").toggleClass("sidebar-open");
+    $("body").toggleClass("sidebar-open");
   });
 });
 

@@ -1,23 +1,13 @@
 .page-content {
   display: grid;
-  width: calc(100vw + #{$sidebar-width});
+  width: 100%;
   height: 100vh;
-  grid-template-columns: minmax(0, 1fr) $sidebar-width;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: 4rem 1fr 3rem;
   grid-template-areas:
-    "header about"
-    "main   about"
-    "events about";
-  transition: 0.4s transform $cubic-bezier;
-  will-change: transform;
-  // Fix flickering and jitteryness, if we can
-  backface-visibility: hidden;
-  perspective: 1000;
-  // Enable hardware acceleration
-  transform: translate3d(0, 0, 0);
-  &.sidebar-open {
-    transform: translate3d(-#{$sidebar-width}, 0, 0);
-  }
+    "header"
+    "main"
+    "events";
 }
 
 .page-header {
@@ -30,8 +20,4 @@
 
 .events-wrapper {
   grid-area: events;
-}
-
-.about {
-  grid-area: about;
 }
