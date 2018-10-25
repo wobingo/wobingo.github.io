@@ -32,6 +32,7 @@ html, body {
   position: fixed;
   font-size: 16px;
   height: 100%;
+  width: 100%;
   @media screen and (max-width: 900px) { font-size: 15px; }
   @media screen and (max-width: 600px) { font-size: 14px; }
   line-height: $base-line-height;
@@ -39,7 +40,6 @@ html, body {
   font-weight: $base-font-weight;
   color: $color-text;
   background-color: $color-bg;
-  overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
