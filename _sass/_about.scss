@@ -17,16 +17,11 @@
   bottom: 0;
   width: 30vw;
   z-index: 30;
-  transform: translate3d(#{$sidebar-width}, 0, 0);
-
-  .about-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    height: 100%;
-    transform: translate3d(30%, 0, 0);
-    transition-delay: 0.1s;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transform: scaleX(0);
+  transform-origin: right;
 
   .about-header {
     display: flex;
@@ -313,8 +308,8 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 }
 
 .sidebar-open {
-  .about, .about-wrapper {
-    transform: translate3d(0,0,0);
+  .about {
+    transform: scale(1);
   }
   .about-overlay {
     opacity: 1;
@@ -325,7 +320,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   }
 }
 
-.page-content, .about, .about-wrapper {
+.page-content, .about {
   transition: 0.3s transform ease-in-out;
   will-change: transform;
   backface-visibility: hidden;
