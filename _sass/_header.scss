@@ -37,12 +37,12 @@
     fill: red;
     path {
       animation: 4s pulse infinite alternate ease-in-out;
-      &#W { animation-delay: -5s; animation-duration: 3.2s; }
-      &#O { animation-delay: -4s; animation-duration: 3.2s; }
-      &#C { animation-delay: -3s; }
-      &#H { animation-delay: -2s; }
-      &#A { animation-delay: -1s; }
-      &#N { animation-delay: 0s; }
+      &.W { animation-delay: -5s; animation-duration: 3.2s; }
+      &.O { animation-delay: -4s; animation-duration: 3.2s; }
+      &.C { animation-delay: -3s; }
+      &.H { animation-delay: -2s; }
+      &.A { animation-delay: -1s; }
+      &.N { animation-delay: 0s; }
     }
   }
 }

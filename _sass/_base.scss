@@ -119,6 +119,10 @@ figure {
   }
 }
 
+label {
+  @include cursor(default);
+}
+
 ul,
 ol {
   margin-left: $spacing-unit;

@@ -189,10 +189,11 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     }
   }
 
-  #bio-stepper[type='range'] {
+  input[type='range'] {
     -webkit-appearance: none;
     background: transparent;
-    margin: $thumb-height / 2 0;
+    padding: 30px 0;
+    margin: -18px 0;
     width: $track-width;
     @include cursor(resize-h);
 

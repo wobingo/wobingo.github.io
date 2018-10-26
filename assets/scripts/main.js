@@ -45,7 +45,7 @@ $(document).ready(function () {
 
   function registerBioEvents() {
     $sentences = $(".bio-item");
-    $stepper = $("#bio-stepper");
+    $stepper = $("#verbosity");
 
     $stepper.on("input", function () {
       $sentences.removeClass(ACTIVE_CLASS);
