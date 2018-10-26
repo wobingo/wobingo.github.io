@@ -81,7 +81,7 @@ $(document).ready(function () {
   //
 
   $('.events').marquee({
-    duration: 15000,
+    speed: 50,
     gap: 0,
     duplicated: true
   });
