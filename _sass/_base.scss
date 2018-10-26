@@ -167,23 +167,3 @@ a {
   padding: 0;
   border: 0; 
 }
-
-// Lazy Load Images
-
-img:not([src]) {
-  visibility: hidden;
-}
-
-// Fixes Firefox anomaly during image load
-@-moz-document url-prefix() {
-  img:-moz-loading {
-    visibility: hidden;
-  }
-}
-
-// Fixes MS Edge InteractionObserver bug
-img[data-src],
-img[data-srcset] {
-  display: block;
-  min-height: 1px;
-}
