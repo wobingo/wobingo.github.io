@@ -1,20 +1,40 @@
 #intro {
   height: 100%;
-  font-size: 50px;
   font-family: $secondary-font-family;
   font-weight: bold;
-  letter-spacing: 4px;
   fill: transparent;
+  letter-spacing: 0.2em;
   stroke: $color-primary;
-  stroke-width: 2;
+  stroke-width: 0.12em;
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   user-select: none;
 
-  svg {
-    display: block;
+  .intro-mobile {
+    font-size: 44px;
     width: 90%;
+    margin-top: 15%;
+    @media screen and (min-width: 740px) {
+      display: none;
+    }
+  }
+
+  .intro-desktop {
+    font-size: 50px;
+    width: 90%;
+    @media screen and (max-width: 741px) {
+      display: none;
+    }
+    svg {
+      margin-left: -5%; // Optical adjust for text height
+    }
+  }
+
+  svg {
+    width: 100%;
+    display: block;
     overflow: visible;
 
     .intro-link {

@@ -19,7 +19,7 @@
 }
 
 #logo {
-  margin: 20px;
+  margin: 1.4rem;
   padding: 0;
   animation: 0.2s popIn $cubic-bezier both;
   animation-delay: 7.5s;
@@ -33,7 +33,7 @@
     }
   }
 
-  svg #wordmark {
+  svg .wordmark {
     fill: red;
     path {
       animation: 4s pulse infinite alternate ease-in-out;
@@ -116,9 +116,23 @@
 }
 
 @media screen and (max-width: 630px) {
-  .site-nav {
+  .site-header {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
+  }
+  .site-nav {
+    margin: 0;
+  }
+  #logo {
+    margin-bottom: 0;
+  }
+  .logo-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 631px) {
+  .logo-mobile {
+    display: none;
   }
 }
