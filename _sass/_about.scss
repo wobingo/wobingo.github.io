@@ -185,6 +185,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     }
     &.high {
       align-self: flex-end;
+      order: 3;
     }
   }
 
