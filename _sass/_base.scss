@@ -117,6 +117,21 @@ figure {
       color: $color-primary;
     }
   }
+
+  // Lazysizes Blur Up
+
+  .blur-up {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    transform: scale(1.1);
+    transition: filter 0.3s, -webkit-filter 0.3s, transform 0.3s;
+  }
+
+  .blur-up.lazyloaded {
+    transform: scale(1);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
 }
 
 label {
@@ -171,17 +186,4 @@ a {
   margin: -1px;
   padding: 0;
   border: 0; 
-}
-
-// Lazysizes Blur Up
-
-.blur-up {
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  transition: filter 400ms, -webkit-filter 400ms;
-}
-
-.blur-up.lazyloaded {
-  -webkit-filter: blur(0);
-  filter: blur(0);
 }
