@@ -100,6 +100,7 @@ img {
 
 figure {
   position: relative;
+  overflow: hidden;
   >img {
     display: block;
   }
@@ -166,4 +167,17 @@ a {
   margin: -1px;
   padding: 0;
   border: 0; 
+}
+
+// Lazysizes Blur Up
+
+.blur-up {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 400ms, -webkit-filter 400ms;
+}
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
 }
