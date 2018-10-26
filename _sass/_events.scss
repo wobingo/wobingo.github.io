@@ -27,9 +27,18 @@
 
 .events {
   flex: 1;
+  overflow-y: hidden;
   overflow-x: scroll;
+  white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   font-family: $secondary-font-family;
+  // Hide scrollbar outside the bounds of the page
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+
+  ::-webkit-scrollbar { 
+    display: none; 
+  }
   
   .event {
     padding: 0 2rem;
