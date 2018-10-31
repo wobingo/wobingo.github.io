@@ -3,17 +3,19 @@
 > my mommy let me have a website
 
 ## About
-This website was designed and coded by [Kyle Decker](https://kyledecker.me). It was built using [Jekyll](https://jekyllrb.com/) and it's freely hosted using [Github Pages](https://pages.github.com/), served with the help of [Cloudflare](https://www.cloudflare.com/).
+This website was designed and coded by [Kyle Decker](https://kyledecker.me). It was built with [Jekyll](https://jekyllrb.com/) and it's freely hosted on [Github Pages](https://pages.github.com/) served with the help of [Cloudflare](https://www.cloudflare.com/). [Namecheap](https://www.namecheap.com/) is the domain registrar. 
 
-It couldn't have been made without these applications:
+It couldn't have been made without these applications,
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Sketch](https://www.sketchapp.com/)
 - [iTerm](https://iterm2.com/)
 
-These plugins or helpful snippets:
+these plugins or helpful snippets,
 - [Lazysizes](https://github.com/aFarkas/lazysizes)
 - [jQuery Marquee](https://github.com/aamirafridi/jQuery.Marquee)
 - [range.css](http://danielstern.ca/range.css/#/)
+
+and two friends that were willing to say yes to almost every dumb idea they came up with.
 
 ## Images
 The website features photography by [Haley Varacallo](http://www.haleyvaracallo.com) and [Armon Burton](https://www.instagram.com/armbur).
