@@ -30,4 +30,4 @@ sqip -o output.svg input.jpg
 ```
 
 ## License
-Feel free to fork this and do whatever you like. Please don't directly copy or steal the work here. We're artists and we work hard to develop our craft. If you do make something cool with this or are just inspired by it, I'd love to hear from you at (kyle@kyledecker.me). :)
+Feel free to fork this and do whatever you like. Please don't directly copy or steal the work here. We're artists and we work hard to develop our craft. If you do make something cool with this or are just inspired by it, I'd love to hear from you at kyle@kyledecker.me. :)
