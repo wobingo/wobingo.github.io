@@ -3,7 +3,7 @@
 > my mommy let me have a website
 
 ## About
-[wo.bingo](wo.bingo) was designed and coded by [Kyle Decker](https://kyledecker.me). It was built with [Jekyll](https://jekyllrb.com/) and it's freely hosted on [Github Pages](https://pages.github.com/) served with the help of [Cloudflare](https://www.cloudflare.com/). [Namecheap](https://www.namecheap.com/) is the domain registrar. 
+[https://wo.bingo](wo.bingo) was designed and coded by [Kyle Decker](https://kyledecker.me). It was built with [Jekyll](https://jekyllrb.com/) and it's freely hosted on [Github Pages](https://pages.github.com/) served with the help of [Cloudflare](https://www.cloudflare.com/). [Namecheap](https://www.namecheap.com/) is the domain registrar. 
 
 It couldn't have been made without these applications,
 - [Visual Studio Code](https://code.visualstudio.com/)
