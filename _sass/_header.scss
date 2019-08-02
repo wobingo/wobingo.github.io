@@ -22,7 +22,7 @@
   margin: 1.4rem;
   padding: 0;
   animation: 0.2s popIn $cubic-bezier both;
-  animation-delay: 7.5s;
+  animation-delay: 1s;
 
   a {
     display: block;
@@ -63,7 +63,7 @@
 .site-nav {
   margin: 20px;
   animation: 0.2s popIn $cubic-bezier both;
-  animation-delay: 7.5s;
+  animation-delay: 1s;
   display: flex;
   justify-content: flex-end;
 
